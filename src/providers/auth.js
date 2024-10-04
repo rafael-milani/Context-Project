@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-export const AuthContext = React.createContext({});
+export const AuthContext = createContext({});
 
 export const AuthProvider = (props) => {
   const [user, setUser] = useState({
@@ -25,4 +25,4 @@ export const AuthProvider = (props) => {
   );
 };
 
-export const useAuth = () => React.useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
